@@ -34,7 +34,7 @@ function checkAnswer(currentLevel){
             setTimeout(() => {nextSequence(), 1000})
         }
     } else {
-        new Audio("./sounds/wrong.mp3").play();
+        new Audio("./wrong.mp3").play();
         $("body").addClass("game-over");
         setTimeout(() => {$("body").removeClass("game-over");}, 200)
         console.log("wrong.")
@@ -64,7 +64,7 @@ function nextSequence(){
 
 }
 function playSound(colour){
-    new Audio("sounds/" + colour + ".mp3").play();
+    new Audio("./" + colour + ".mp3").play();
 }
 
 function animatePress(currentColour){
