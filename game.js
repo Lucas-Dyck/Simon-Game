@@ -56,12 +56,7 @@ function startOver(){
 }
 
 function saveHighestLevel(level){
-    var highestLevel = 0;
-    if (level > highestLevel){
-        highestLevel = level;
-    } else {
-        highestLevel = level;
-    }
+    highestLevel = Math.max(level, newScore);
     return (`Your highest level is ${highestLevel}!`);
 }
 
