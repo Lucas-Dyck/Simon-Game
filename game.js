@@ -43,6 +43,7 @@ function checkAnswer(currentLevel){
     }
 }
 function startOver(){
+    started = false;
     $("p").text(saveHighestLevel(level));
     $("#level-title").text("Game Over, Press the Centre to Restart");
     gamePattern = [];
@@ -51,8 +52,9 @@ function startOver(){
 }
 function saveHighestLevel(level){
     highestLevel = Math.max(level, highestLevel);
-    setTimeout(()=>{return(`Your highest level is ${highestLevel}!`);}
-        , 2000)
+    while (started === false){
+        return(`Your highest level is ${highestLevel}!`);
+    }
 }
 function nextSequence(){
     userClickedPattern = [];
