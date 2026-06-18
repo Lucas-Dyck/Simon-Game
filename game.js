@@ -60,17 +60,31 @@ function nextSequence(){
     userClickedPattern = [];
     level++;
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-    setTimeout(() => {$("#level-title").text("Level " + level);
-    var randomChosenColour = buttonColours[Math.floor(Math.random() * buttonColours.length)];
-    gamePattern.push(randomChosenColour);
-    async function flashSequence(gamePattern) {
-        for (const colour of gamePattern) {
-            animatePress(colour);
-            playSound(colour);
-            await delay(600); 
+    if (gamePattern.length > 0) {
+        setTimeout(() => {$("#level-title").text("Level " + level);
+        var randomChosenColour = buttonColours[Math.floor(Math.random() * buttonColours.length)];
+        gamePattern.push(randomChosenColour);
+        async function flashSequence(gamePattern) {
+            for (const colour of gamePattern) {
+                animatePress(colour);
+                playSound(colour);
+                await delay(600); 
         }
     }
-    flashSequence(gamePattern);}, 1500);
+    flashSequence(gamePattern);}, 1000);
+
+    else if (gamePattern.length === 0) {
+        setTimeout(() => {$("#level-title").text("Level " + level);
+        var randomChosenColour = buttonColours[Math.floor(Math.random() * buttonColours.length)];
+        gamePattern.push(randomChosenColour);
+        async function flashSequence(gamePattern) {
+            for (const colour of gamePattern) {
+                animatePress(colour);
+                playSound(colour);
+                await delay(600); 
+        }
+    }
+    flashSequence(gamePattern);}, 400);
 }
 function playSound(colour){
     new Audio(colour + ".mp3").play();
