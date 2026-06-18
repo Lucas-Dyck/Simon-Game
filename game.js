@@ -49,10 +49,20 @@ function checkAnswer(currentLevel){
 
 function startOver(){
     $("#level-title").text("Game Over, Press the Centre to Restart");
-    $("#highest-level").text(saveHighestLevel(level));
-    level = 0;
+    $("p").text(saveHighestLevel(level));
     gamePattern = [];
     started = false;
+    level = 0;
+}
+
+function saveHighestLevel(level){
+    var highestLevel = 0;
+    if (level > highestLevel){
+        highestLevel = level;
+    } else {
+        highestLevel = level;
+    }
+    return (`Your highest level is ${highestLevel}!`);
 }
 
 function nextSequence(){
@@ -84,17 +94,4 @@ function animatePress(Colour){
     setTimeout(function(){
         $("#" + Colour).css("background-image", endFill);
     }, 200)
-}
-
-function saveHighestLevel(level){
-    var currentLevel = level;
-    var highestlevel = 0;
-    if (currentLevel > highestlevel){
-        highestlevel = currentLevel;
-    }
-    else {
-        highestlevel = currentLevel;
-    }
-    return "Your highest level is " + highestlevel;
-
 }
