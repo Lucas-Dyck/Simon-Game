@@ -51,9 +51,8 @@ function startOver(){
 }
 function saveHighestLevel(level){
     highestLevel = Math.max(level, highestLevel);
-    while (started === false){
-        return(`Your highest level is ${highestLevel}!`);
-    }
+    setTimeout(()=>{return(`Your highest level is ${highestLevel}!`);}
+        , 2000)
 }
 function nextSequence(){
     userClickedPattern = [];
