@@ -70,7 +70,7 @@ function nextSequence(){
             await delay(600); 
         }
     }
-    flashSequence(gamePattern);}, 2000);
+    flashSequence(gamePattern);}, 1500);
 }
 function playSound(colour){
     new Audio(colour + ".mp3").play();
