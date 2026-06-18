@@ -30,8 +30,6 @@ img[src="./header_logo.png"]{
 
 #game {
   z-index: 5;
-  position: relative;
-  top: 50px;
 }
 
 #level-title {
@@ -50,10 +48,7 @@ img[src="./header_logo.png"]{
   height: 760px;
   background-color: rgb(4, 4, 4);
   border-radius: 50%;
-  border-radius: 50%;  
-  left: 18px;
-  position: relative;
-  top: 17px;
+  border-radius: 50%;
 }
 
 .border-circle {
