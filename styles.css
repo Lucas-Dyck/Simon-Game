@@ -6,7 +6,7 @@ body {
   height:100vh;
 }
 
-h2 {
+#center-button {
   width: 200px;
   height: 200px;
   font-family:  'Press Start 2P', cursive;
@@ -16,6 +16,8 @@ h2 {
   top: 370px;
   font-size: 5rem;
   text-align: center;
+  border-radius: 50%;
+  background-color: black;
 }
 
 img[src="./header_logo.png"]{
@@ -65,7 +67,6 @@ img[src="./header_logo.png"]{
   display: inline-block;
   height: 350px;
   width: 350px;
-  border-radius: 35%;
   position: relative;
   bottom: 105px;
 }
@@ -78,25 +79,21 @@ img[src="./header_logo.png"]{
 .red {
   background-color: red;
   border-top-right-radius: 100%;
-  corner-shape: square round square scoop;
 }
 
 .green {
   background-color: rgb(0, 172, 0);
   border-top-left-radius: 100%;
-  corner-shape: round square scoop square;
 }
 
 .blue {
   background-color: blue;
   border-bottom-right-radius: 100%;
-  corner-shape: scoop square round square;
 }
 
 .yellow {
   background-color: yellow;
   border-bottom-left-radius: 100%;
-  corner-shape: square scoop square round;
 }
 
 .pressed {
