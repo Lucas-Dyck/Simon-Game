@@ -61,7 +61,7 @@ function saveHighestLevel(level) {
     highestLevel = level;
     console.log(`You reached ${highestLevel}`);
   } else {
-        console.log(level);
+        console.log(`You reached ${highestLevel}`);
   }
 }
 
