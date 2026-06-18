@@ -38,7 +38,7 @@ function checkAnswer(currentLevel){
             setTimeout(() => {nextSequence(), 1000})
         }
     } else {
-        new Audio("./sounds/wrong.mp3").play();
+        new Audio("./wrong.mp3").play();
         $("body").css("background-image", "linear-gradient(red,red)");
         setTimeout(() => {$("body").css("background-image", "url(./tabletop.jpg)");}, 200)
         console.log("wrong.")
@@ -83,7 +83,7 @@ function nextSequence(){
     
 }
 function playSound(colour){
-    new Audio("./sounds/" + colour + ".mp3").play();
+    new Audio("./" + colour + ".mp3").play();
 }
 
 function animatePress(Colour){
