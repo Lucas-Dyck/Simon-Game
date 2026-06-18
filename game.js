@@ -55,11 +55,14 @@ function startOver(){
     level = 0;
 }
 
-function saveHighestLevel(level){
-    highestLevel = Math.max(level, newScore);
-    while (started === false){
-        console.log("`Your highest level is ${highestLevel}!`");
-    }
+let highestLevel = 0;
+function saveHighestLevel(level) {
+  if (level > highestLevel) {
+    highestLevel = level;
+    console.log(`You reached ${highestLevel}`);
+  } else {
+        console.log(level);
+  }
 }
 
 function nextSequence(){
