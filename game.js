@@ -57,7 +57,9 @@ function startOver(){
 
 function saveHighestLevel(level){
     highestLevel = Math.max(level, newScore);
-    return (`Your highest level is ${highestLevel}!`);
+    while (started === false){
+        console.log("`Your highest level is ${highestLevel}!`");
+    }
 }
 
 function nextSequence(){
