@@ -38,7 +38,7 @@ function checkAnswer(currentLevel){
             setTimeout(() => {nextSequence(), 1000})
         }
     } else {
-        new Audio("./wrong.mp3").play();
+        new Audio("./sounds/wrong.mp3").play();
         $("body").css("background-image", "linear-gradient(red,red)");
         setTimeout(() => {$("body").css("background-image", "url(./tabletop.jpg)");}, 200)
         console.log("wrong.")
@@ -48,10 +48,11 @@ function checkAnswer(currentLevel){
 }
 
 function startOver(){
+    $("#level-title").text("Game Over, Press the Centre to Restart");
+    $("#highest-level").text(saveHighestLevel(level));
     level = 0;
     gamePattern = [];
     started = false;
-    $("#level-title").text("Game Over, Press the Centre to Restart");
 }
 
 function nextSequence(){
@@ -72,7 +73,7 @@ function nextSequence(){
     
 }
 function playSound(colour){
-    new Audio("./" + colour + ".mp3").play();
+    new Audio("./sounds/" + colour + ".mp3").play();
 }
 
 function animatePress(Colour){
@@ -83,4 +84,17 @@ function animatePress(Colour){
     setTimeout(function(){
         $("#" + Colour).css("background-image", endFill);
     }, 200)
+}
+
+function saveHighestLevel(level){
+    var currentLevel = level;
+    var highestlevel = 0;
+    if (currentLevel > highestlevel){
+        highestlevel = currentLevel;
+    }
+    else {
+        highestlevel = currentLevel;
+    }
+    return "Your highest level is " + highestlevel;
+
 }
