@@ -40,8 +40,9 @@ img[src="./header_logo.png"]{
 }
 
 .black-circle {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 350px 350px;
+  grid-template-rows: 350px 350px;
   justify-content: center;
   align-items: center;
   width: 760px;
@@ -77,21 +78,29 @@ img[src="./header_logo.png"]{
 .red {
   background-color: red;
   border-top-right-radius: 100%;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .green {
   background-color: rgb(0, 172, 0);
   border-top-left-radius: 100%;
+  grid-row: 1;
+  grid-column: 2;
 }
 
 .blue {
   background-color: blue;
   border-bottom-right-radius: 100%;
+  grid-row: 2;
+  grid-column: 2;
 }
 
 .yellow {
   background-color: yellow;
   border-bottom-left-radius: 100%;
+  grid-row: 2;
+  grid-column: 1;
 }
 
 .pressed {
