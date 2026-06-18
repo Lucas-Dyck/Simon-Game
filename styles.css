@@ -41,7 +41,7 @@ img[src="./header_logo.png"]{
 
 .black-circle {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 760px;
