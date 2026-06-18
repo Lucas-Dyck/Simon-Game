@@ -12,10 +12,13 @@ body {
   font-family:  'Press Start 2P', cursive;
   color: white;
   z-index: 100;
-  font-size: 5rem;
+  font-size: 2rem;
   text-align: center;
   border-radius: 50%;
   background-color: black;
+  position: relative;
+  top: 50%;
+  left: 50%;
 }
 
 img[src="./header_logo.png"]{
