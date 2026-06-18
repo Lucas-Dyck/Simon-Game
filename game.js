@@ -32,7 +32,7 @@ function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]){
         console.log("success!");
         if (userClickedPattern.length === gamePattern.length){
-            setTimeout(() => {nextSequence(), 2000})
+            setTimeout(() => {nextSequence(), 1000})
         }
     } else {
         new Audio("wrong.mp3").play();
@@ -70,7 +70,7 @@ function nextSequence(){
             await delay(600); 
         }
     }
-    flashSequence(gamePattern);}, 800);
+    flashSequence(gamePattern);}, 1400);
 }
 function playSound(colour){
     new Audio(colour + ".mp3").play();
