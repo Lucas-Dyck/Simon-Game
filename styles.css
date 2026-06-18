@@ -67,6 +67,8 @@ img[src="./header_logo.png"]{
   display: inline-block;
   height: 350px;
   width: 350px;
+  position: relative;
+  top: 100px;
 }
 
 .game-over {
