@@ -13,12 +13,14 @@ body {
   color: white;
   z-index: 100;
   font-size: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: black;
   position: relative;
-  top: 50%;
-  left: 50%;
+  top: 400px;
+  left: 400px;
 }
 
 img[src="./header_logo.png"]{
