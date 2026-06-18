@@ -59,8 +59,9 @@ function nextSequence(){
     var randomChosenColour = buttonColours[Math.floor(Math.random() * 4)];
     gamePattern.push(randomChosenColour);
     $("#" + randomChosenColour).addClass("pressed");
-    setTimeout(() => {$("#" + randomChosenColour).removeClass("pressed")}, 200)
+    setTimeout(() => {$("#" + randomChosenColour).removeClass("pressed")}, 200);
     playSound(randomChosenColour);
+    setTimeout(() => {continue;, 500);
 
 }
 function playSound(colour){
