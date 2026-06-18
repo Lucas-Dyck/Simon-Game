@@ -61,10 +61,10 @@ function nextSequence(){
     $("#" + randomChosenColour).addClass("pressed");
     setTimeout(() => {$("#" + randomChosenColour).removeClass("pressed")}, 200);
     playSound(randomChosenColour);
-    setTimeout(function(){
-        continue;
-    }, 500);
-
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    sleep(2000).then(() => {
+      continue;
+    });
 }
 function playSound(colour){
     new Audio("./" + colour + ".mp3").play();
