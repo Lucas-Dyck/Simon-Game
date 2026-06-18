@@ -49,6 +49,9 @@ img[src="./header_logo.png"]{
   background-color: rgb(4, 4, 4);
   border-radius: 50%;
   border-radius: 50%;
+  position: relative;
+  top: 50px;
+  left: 50px;
 }
 
 .border-circle {
