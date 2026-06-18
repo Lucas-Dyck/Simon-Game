@@ -6,7 +6,7 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
-$("h2").on("click", function(){
+$("#center-button").on("click", function(){
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
