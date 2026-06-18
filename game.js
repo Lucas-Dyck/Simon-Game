@@ -61,7 +61,9 @@ function nextSequence(){
     $("#" + randomChosenColour).addClass("pressed");
     setTimeout(() => {$("#" + randomChosenColour).removeClass("pressed")}, 200);
     playSound(randomChosenColour);
-    setTimeout(() => {continue;, 500);
+    setTimeout(function(){
+        continue;
+    }, 500);
 
 }
 function playSound(colour){
