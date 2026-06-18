@@ -1,14 +1,15 @@
 body {
-  background-color: #011F3F;
+  background-image: url('./tabletop.jpg');
+  background-size:cover; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  height:100vh;
+  height:100%;
 }
 
 #center-button {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   font-family:  'Press Start 2P', cursive;
   color: white;
   z-index: 100;
@@ -17,25 +18,29 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: black;
+  background-color:  rgb(28, 28, 28);
   position: relative;
-  top: 496px;
-  left: 300px;
+  top: 550px;
+  left: 254px;
 }
 
-img[src="./header_logo.png"]{
-  width: 700px;
+img {
+  width: 250px;
   margin: 50px 0px 50px 0px;
 }
 
 #game {
   z-index: 5;
+  height: 760px;
+  width:760px;
+  position: relative;
+  bottom: 200px;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 2rem;
-  color: #FEF2BF;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -43,22 +48,25 @@ img[src="./header_logo.png"]{
   display: grid;
   grid-template-columns: 350px 350px;
   grid-template-rows: 350px 350px;
-  gap: 7px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   width: 760px;
   height: 760px;
-  background-color: rgb(4, 4, 4);
+  background-color: rgb(28, 28, 28);
   border-radius: 50%;
+  position: relative;
+  top: 20px;
+  left: 20px;
 }
 
 .border-circle {
   width: 800px;
   height:800px;
-  background-image: linear-gradient(90deg, rgb(13, 17, 25), rgb(64, 68, 106));
+  background-image: linear-gradient(90deg, rgb(10, 10, 10), rgb(77, 77, 77));
   border-radius: 50%;
   z-index:-2;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: -20px 5px 20px black;
 }
 
 .btn {
@@ -66,8 +74,28 @@ img[src="./header_logo.png"]{
   height: 350px;
   width: 350px;
   position: relative;
-  top: 50px;
-  left:50px;
+  top: 20px;
+  left:0px;
+}
+
+button{
+  background-color: white;
+  z-index: 100;
+  border: 3px solid transparent;
+  height: 50px;
+  width:200px;
+  border-radius: 20px;
+  position: relative;
+  top: 200px;
+  font-family: "Press Start 2P";
+  color: #011F3F;
+}
+
+button:active{
+  color: white;
+  border: 3px solid white;
+  background-color: transparent;
+  transition: 200ms;
 }
 
 .game-over {
@@ -120,10 +148,11 @@ img[src="./header_logo.png"]{
     transform: scale(0.8);
   }
 }
+
 @media (max-width: 470px) {
   #game {
     transform:
-    scale(0.5);
+    scale(0.4);
   }
   img[src="./header_logo"]{
     width: 350px;
