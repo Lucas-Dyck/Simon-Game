@@ -62,9 +62,8 @@ function nextSequence(){
     setTimeout(() => {$("#" + randomChosenColour).removeClass("pressed")}, 200);
     playSound(randomChosenColour);
     const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    sleep(2000).then(() => {
-      continue;
-    });
+    await sleep(2000);
+    continue;
 }
 function playSound(colour){
     new Audio("./" + colour + ".mp3").play();
