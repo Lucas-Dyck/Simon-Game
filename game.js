@@ -32,7 +32,7 @@ function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]){
         console.log("success!");
         if (userClickedPattern.length === gamePattern.length){
-            setTimeout(() => {nextSequence(), 1000})
+            setTimeout(() => {nextSequence(), 2000})
         }
     } else {
         new Audio("wrong.mp3").play();
