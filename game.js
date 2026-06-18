@@ -3,7 +3,7 @@ var gamePattern = [];
 var userClickedPattern = [];
 var level = 0;
 var started = false;
-
+let highestLevel = 0;
 $("#center-button").on("click", function(){
 
     if (!started) {
@@ -16,7 +16,6 @@ $("#center-button").on("click", function(){
         $("img").css("opacity", 1)
     }, 100)
 });
-
 $(".btn").on("click", function(){
     var userChosenColour = $(this).attr("id");
     userClickedPattern.push(userChosenColour);
@@ -29,11 +28,9 @@ $("button").on("click", function(){
     startOver();
     playSound("yellow");
 })
-
 function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]){
         console.log("success!");
-        
         if (userClickedPattern.length === gamePattern.length){
             setTimeout(() => {nextSequence(), 1000})
         }
@@ -44,9 +41,7 @@ function checkAnswer(currentLevel){
         console.log("wrong.")
         startOver();
     }
-    
 }
-
 function startOver(){
     $("p").text(saveHighestLevel(level));
     $("#level-title").text("Game Over, Press the Centre to Restart");
@@ -54,17 +49,12 @@ function startOver(){
     started = false;
     level = 0;
 }
-
-let highestLevel = 0;
-function saveHighestLevel(level) {
-  if (level > highestLevel) {
-    highestLevel = level;
-    console.log(`You reached ${highestLevel}`);
-  } else {
-        console.log(`You reached ${highestLevel}`);
-  }
+function saveHighestLevel(level){
+    highestLevel = Math.max(level, highestLevel);
+    while (started === false){
+        return("`Your highest level is ${highestLevel}!`");
+    }
 }
-
 function nextSequence(){
     userClickedPattern = [];
     level++;
@@ -80,12 +70,10 @@ function nextSequence(){
         }
     }
     flashSequence(gamePattern);}, 800);
-    
 }
 function playSound(colour){
     new Audio(colour + ".mp3").play();
 }
-
 function animatePress(Colour){
     var buttonCurrentRGB = $("#" + Colour).css("background-color");
     var radialGradient = `radial-gradient(white, ${buttonCurrentRGB})`;
