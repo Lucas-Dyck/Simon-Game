@@ -148,13 +148,16 @@ button:active{
   #game {
     transform: scale(1.2);
     position: relative;
-    bottom: 100px;
+    bottom: 300px;
   }
   img[src="./header_logo"]{
     width: 400px;
   }
   h1 {
     transform: scale(0.8);
+  }
+  p {
+    bottom: 100px;
   }
 }
 
