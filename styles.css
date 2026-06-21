@@ -147,6 +147,8 @@ button:active{
 @media (width >= 800px) {
   #game {
     transform: scale(1.2);
+    position: relative;
+    bottom: 100px;
   }
   img[src="./header_logo"]{
     width: 400px;
