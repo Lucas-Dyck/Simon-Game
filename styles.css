@@ -147,7 +147,6 @@ button:active{
 @media (width >= 800px) {
   #game {
     transform: scale(1.2);
-    margin-top: 40px;
   }
   img[src="./header_logo"]{
     width: 400px;
@@ -160,7 +159,8 @@ button:active{
 @media (width <= 800px and width > 470px) {
   #game {
     transform: scale(0.7);
-    margin-top: 50px;
+    position: relative;
+    bottom: 50px;
   }
   p {
     position: relative;
@@ -177,8 +177,9 @@ button:active{
 @media (width <= 470px) {
   #game {
     transform: scale(0.45);
-    margin-top: 1200px;
-    margin-right: 8px;
+    position: relative;
+    top: 1200px;
+    right: 15px;
   }
   img[src="./header_logo"]{
     width: 350px;
