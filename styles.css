@@ -43,7 +43,6 @@ p {
   z-index: 5;
   height: 760px;
   width:760px;
-  margin-top: calc(25vh-380px);
 }
 
 #level-title {
@@ -149,6 +148,25 @@ button:active{
 @media (width <= 800px) {
   #game {
     transform: scale(0.7);
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  p {
+    position: relative;
+    bottom: 300px;
+  }
+  img[src="./header_logo"]{
+    width: 400px;
+  }
+  h1 {
+    transform: scale(0.8);
+  }
+}
+@media (width >= 800px) {
+  #game {
+    transform: scale(1.2);
+    position: relative;
+    bottom: 200px;
   }
   img[src="./header_logo"]{
     width: 400px;
@@ -161,6 +179,7 @@ button:active{
 @media (width <= 470px) {
   #game {
     transform: scale(0.45);
+    margin-top: 500px;
   }
   img[src="./header_logo"]{
     width: 350px;
