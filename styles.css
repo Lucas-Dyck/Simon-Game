@@ -43,8 +43,7 @@ p {
   z-index: 5;
   height: 760px;
   width:760px;
-  position: relative;
-  bottom: 200px;
+  margin: calc(50vh - 380px);
 }
 
 #level-title {
@@ -150,8 +149,6 @@ button:active{
 @media (width <= 800px) {
   #game {
     transform: scale(0.7);
-    position: relative;
-    top:50px;
   }
   img[src="./header_logo"]{
     width: 400px;
@@ -164,8 +161,6 @@ button:active{
 @media (width <= 470px) {
   #game {
     transform: scale(0.45);
-    position: relative;
-    top:100px;
   }
   img[src="./header_logo"]{
     width: 350px;
