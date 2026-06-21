@@ -43,7 +43,7 @@ p {
   z-index: 5;
   height: 760px;
   width:760px;
-  margin-top: 30vh;
+  margin-top: calc(25vh-380px);
 }
 
 #level-title {
