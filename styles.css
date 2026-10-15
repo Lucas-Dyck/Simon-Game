@@ -66,10 +66,8 @@ p {
   position: relative;
   top: 20px;
   left: 20px;
-  transform:
-      scaleY(0.6)
-      rotate(45deg)
-  transform-origin: center;
+  rotate: 45deg;
+  scale: 1 0.6;
 }
 
 .border-circle {
