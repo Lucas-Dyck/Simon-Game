@@ -71,7 +71,7 @@ p {
 .border-circle {
   width: 800px;
   height:800px;
-  background-image: linear-gradient(45deg, #0F0F0F, #909090);
+  background-image: linear-gradient(90deg, #000000, #909090);
   border-radius: 50%;
   z-index:-2;
 }
