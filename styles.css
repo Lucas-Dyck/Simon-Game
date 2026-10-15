@@ -42,6 +42,8 @@ p {
   z-index: 5;
   height: 760px;
   width:760px;
+  transform-style: preserve-3d;
+  transform: rotateZ(45deg) rotateX(45deg) scale(1.4);
 }
 
 #level-title {
@@ -66,8 +68,6 @@ p {
   position: relative;
   top: 20px;
   left: 20px;
-  transform-style: preserve-3d;
-  transform: rotateX(60deg);
 }
 
 .border-circle {
@@ -85,6 +85,7 @@ p {
   position: relative;
   top: 20px;
   left:0px;
+  
 }
 
 button{
@@ -108,7 +109,7 @@ button:active{
 }
 
 .game-over {
-  background-color: red;
+  background: red url('background.png') no-repeat center / contain;
   opacity: 0.8;
 }
 
