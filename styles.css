@@ -27,11 +27,6 @@ img {
   width: 250px;
   margin: 50px 0px 50px 0px;
 }
-img[src='background.png'] {
-  width: 800px;
-  z-index: -10;
-  transform: scale(2.0);
-}
 
 p {
   position: relative;
@@ -47,8 +42,6 @@ p {
   z-index: 5;
   height: 760px;
   width:760px;
-  transform-style: preserve-3d;
-  transform: rotateZ(45deg) rotateX(45deg) scale(1.4);
 }
 
 #level-title {
