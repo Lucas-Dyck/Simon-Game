@@ -1,7 +1,5 @@
 body {
-  background-image: black url('background.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: black url('background.png') no-repeat center / contain;
   display: flex;
   flex-direction: column;
   align-items: center;
