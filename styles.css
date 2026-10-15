@@ -1,5 +1,8 @@
 body {
   background-image: url('background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +70,6 @@ p {
   top: 20px;
   left: 20px;
   transform:
-      scale(1.05263)
       scaleY(0.6)
       rotate(45deg)
   transform-origin: center;
