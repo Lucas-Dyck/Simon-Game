@@ -27,6 +27,9 @@ img {
   width: 250px;
   margin: 50px 0px 50px 0px;
 }
+img[src='background.png'] {
+  width: 800px;
+}
 
 p {
   position: relative;
@@ -109,7 +112,7 @@ button:active{
 }
 
 .game-over {
-  background: red url('background.png') no-repeat center / contain;
+  background-color: red;
   opacity: 0.8;
 }
 
