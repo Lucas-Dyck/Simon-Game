@@ -64,14 +64,14 @@ p {
   background-color: rgb(28, 28, 28);
   border-radius: 50%;
   position: relative;
-  top: 10px;
+  top: 5px;
   left: 20px;
 }
 
 .border-circle {
   width: 800px;
   height:800px;
-  background-image: linear-gradient(45deg, #222222, #909090);
+  background-image: linear-gradient(45deg, #0F0F0F, #909090);
   border-radius: 50%;
   z-index:-2;
 }
