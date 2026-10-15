@@ -67,15 +67,16 @@ p {
   top: 20px;
   left: 20px;
   transform:
+      scale(1.05263);
       scaleY(0.6);
-      rotate(45);
+      rotate(45deg);
   transform-origin: center;
 }
 
 .border-circle {
   width: 800px;
   height:800px;
-  background-image: linear-gradient(90deg, rgb(10, 10, 10), rgb(77, 77, 77));
+  background-color: none;
   border-radius: 50%;
   z-index:-2;
   box-shadow: -20px 5px 50px black;
